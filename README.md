@@ -25,12 +25,6 @@ Todo está en `js/datos.js`:
 2. Sumá sus marcas en `MARCAS`, en la misma posición.
 3. Si usa una uva nueva, agregala a `COLOR_UVA` para que el racimo tenga su color.
 
-## Publicarla gratis con GitHub Pages
-
-1. Subí estos archivos a un repositorio público.
-2. En el repositorio: Settings, Pages.
-3. En "Build and deployment" elegí "Deploy from a branch", rama `main`, carpeta `/ (root)`.
-4. En un par de minutos queda en `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/`.
 
 ## Estructura
 
@@ -48,4 +42,4 @@ icono.svg             ícono
 - Las marcas son ejemplos conocidos de cada estilo. La disponibilidad cambia según el país y la tienda; conviene verificarla, sobre todo en las uruguayas.
 - Las botellas y los racimos son dibujos hechos en SVG. No se usan logos ni fotos de terceros.
 - Tipografías: Bodoni Moda e Instrument Sans, cargadas desde Google Fonts.
-- Licencia: pendiente de elegir por quien publique el repositorio.
+
