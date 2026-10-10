@@ -1,0 +1,12 @@
+{
+  "name": "Guía de Vinos",
+  "short_name": "Vinos",
+  "description": "Vinos del mundo con marcas, uvas, maridaje y nivel recomendado.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#eeeae7",
+  "theme_color": "#6d1d33",
+  "icons": [
+    { "src": "icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

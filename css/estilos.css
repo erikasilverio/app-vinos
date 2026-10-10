@@ -1,0 +1,418 @@
+/* Guía de Vinos. Estilos. Los colores viven en las variables de :root (claro) y en los bloques oscuros. */
+:root {
+  --bg: #eeeae7;
+  --ink: #1d1417;
+  --mu: #7d7176;
+  --ln: #d5cbcc;
+  --ac: #6d1d33;
+  --on: #fff;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top,0px);
+  padding-bottom: env(safe-area-inset-bottom,0px);
+}
+
+@media(prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171014;
+    --ink: #ebe3e1;
+    --mu: #9d8f94;
+    --ln: #35282d;
+    --ac: #d28d9b;
+    --on: #1a0f13;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #171014;
+  --ink: #ebe3e1;
+  --mu: #9d8f94;
+  --ln: #35282d;
+  --ac: #d28d9b;
+  --on: #1a0f13;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: env(safe-area-inset-top,0px);
+  background: var(--bg);
+}
+
+body {
+  margin: 0 auto;
+  max-width: 620px;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 'Instrument Sans',system-ui,sans-serif;
+  padding: 0 20px 80px;
+}
+
+.d {
+  font-family: 'Bodoni Moda',Georgia,serif;
+  font-weight: 400;
+}
+
+header {
+  padding: 28px 0 4px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.05;
+  letter-spacing: -.01em;
+}
+
+.sub {
+  color: var(--mu);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+#q {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--ln);
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  padding: 14px 0;
+  margin-top: 14px;
+  border-radius: 0;
+  outline: 0;
+}
+
+#q:focus {
+  border-color: var(--ac);
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid var(--ln);
+}
+
+.t {
+  background: none;
+  border: 0;
+  padding: 14px 0 12px;
+  font: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--mu);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+
+.t.on {
+  color: var(--ink);
+  border-color: var(--ac);
+}
+
+.fl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 18px;
+  padding: 12px 0 0;
+  font-size: 14px;
+}
+
+.fl span {
+  color: var(--mu);
+  min-width: 44px;
+}
+
+.f {
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  color: var(--mu);
+  font: inherit;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.f.on {
+  color: var(--ac);
+  border-color: var(--ac);
+}
+
+.nt {
+  color: var(--mu);
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+
+.r {
+  display: grid;
+  grid-template-columns: 44px 1fr auto auto;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--ln);
+  cursor: pointer;
+}
+
+.r:first-of-type {
+  margin-top: 8px;
+}
+
+.r svg {
+  display: block;
+  margin: auto;
+}
+
+.r h3 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.15;
+}
+
+.r p {
+  margin: 3px 0 0;
+  font-size: 13.5px;
+  color: var(--mu);
+}
+
+.g {
+  display: flex;
+  gap: 4px;
+}
+
+.g i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ac);
+}
+
+.g i.on {
+  background: var(--ac);
+}
+
+.dg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--ln);
+  margin-top: 14px;
+}
+
+.dg button {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--ln);
+  padding: 20px 4px 20px 0;
+  text-align: left;
+  color: var(--ink);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.dg button:nth-child(even) {
+  padding-left: 16px;
+  border-left: 1px solid var(--ln);
+}
+
+.dg .on {
+  background: color-mix(in srgb,var(--ac) 12%,transparent);
+  color: var(--ac);
+}
+
+.hd {
+  font-size: 24px;
+  margin: 26px 0 0;
+  line-height: 1.15;
+}
+
+.em {
+  color: var(--mu);
+  padding: 36px 0;
+}
+
+#ov {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  overflow: auto;
+  display: none;
+  z-index: 9;
+  padding-top: env(safe-area-inset-top,0px);
+}
+
+#ov.on {
+  display: block;
+}
+
+.fd {
+  background: color-mix(in srgb,var(--h) 18%,var(--bg));
+  padding: 14px 20px 0;
+}
+
+.bk {
+  display: block;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 500;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.art {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 28px;
+  padding-top: 6px;
+}
+
+.in {
+  max-width: 620px;
+  margin: auto;
+  padding: 26px 20px calc(40px + env(safe-area-inset-bottom,0px));
+}
+
+.in h2 {
+  margin: 0;
+  font-size: 38px;
+  line-height: 1.08;
+}
+
+.s {
+  color: var(--mu);
+  margin: 6px 0 18px;
+}
+
+.ds {
+  max-width: 60ch;
+  margin: 0;
+}
+
+dl {
+  margin: 24px 0 0;
+}
+
+dl>div {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--ln);
+}
+
+dt {
+  color: var(--mu);
+  font-size: 14px;
+}
+
+dd {
+  margin: 0;
+}
+
+.bar {
+  height: 3px;
+  background: var(--ln);
+  margin-top: 9px;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--ac);
+}
+
+.bl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.bl span {
+  border: 1px solid var(--ac);
+  padding: 7px 12px;
+  font: 15px 'Bodoni Moda',Georgia,serif;
+  color: var(--ac);
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 12px;
+  color: var(--mu);
+  padding: 8px 0 14px;
+  max-width: 130px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 15px;
+  border: 0;
+  background: var(--ac);
+  color: var(--on);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:focus-visible,.r:focus-visible,#q:focus-visible {
+  outline: 2px solid var(--ac);
+  outline-offset: 2px;
+}
+
+.hr {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  background: color-mix(in srgb,var(--h) 16%,var(--bg));
+  padding: 22px 20px;
+  margin: 18px -20px 4px;
+  cursor: pointer;
+}
+
+.hr h2 {
+  margin: 4px 0 6px;
+  font-size: 30px;
+  line-height: 1.08;
+  font-weight: 400;
+}
+
+.hr p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--mu);
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+}
+
+#ov.on {
+  animation: up .26s ease-out;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  #ov.on {
+    animation: none;
+  }
+}
+
+.pie {
+  color: var(--mu);
+  font-size: 13px;
+  padding: 28px 0 0;
+}
